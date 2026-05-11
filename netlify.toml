@@ -1,0 +1,25 @@
+[build]
+  publish = "."
+
+# Allow POST requests and set CORS headers for all GD client endpoints
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type, X-Requested-With, Authorization"
+
+# Ensure PHP endpoint paths respond correctly to OPTIONS preflight requests
+[[headers]]
+  for = "/*.php"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type, X-Requested-With"
+
+[[headers]]
+  for = "/accounts/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type, X-Requested-With"
