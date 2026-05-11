@@ -1,0 +1,225 @@
+/* Variables for Easy Customization */
+:root {
+    --primary-color: #0078d7;
+    --secondary-color: #005fa3;
+    --hover-color: #ffdd57;
+    --background-light: #f4f4f4;
+    --background-dark: #1e1e1e;
+    --text-light: #333;
+    --text-dark: #f4f4f4;
+    --form-background-light: #fff;
+    --form-background-dark: #333;
+    --form-border-light: #ccc;
+    --form-border-dark: #555;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: var(--background-light);
+    color: var(--text-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: var(--primary-color);
+    color: var(--text-dark);
+    padding: 10px;
+    flex-direction: column;
+    height: 100vh;
+    position: fixed;
+    width: 250px;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    transition: width 0.3s;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.navbar .menu {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.navbar .menu a {
+    display: block;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 20px;
+    text-align: left;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.navbar .menu a:hover {
+    background-color: var(--hover-color);
+    color: var(--text-light);
+}
+
+/* Main Content */
+main {
+    margin-left: 270px;
+    padding: 20px;
+    transition: margin-left 0.3s;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+}
+
+.section-title {
+    margin-top: 40px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Buttons for Theme and Language */
+.theme-language-switcher {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.theme-language-switcher button {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.theme-language-switcher button.theme {
+    background-color: var(--primary-color);
+    color: var(--text-dark);
+}
+
+.theme-language-switcher button.theme:hover {
+    background-color: var(--secondary-color);
+}
+
+.theme-language-switcher button.language {
+    background-color: var(--hover-color);
+    color: var(--text-light);
+}
+
+.theme-language-switcher button.language:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Form Styles */
+form {
+    background: var(--form-background-light);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--form-border-light);
+    border-radius: 4px;
+}
+
+form button {
+    background: var(--primary-color);
+    color: var(--text-dark);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: var(--secondary-color);
+}
+
+/* Response Box */
+#response {
+    margin-top: 20px;
+    background: var(--background-light);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+pre {
+    background: var(--background-light);
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+body.dark-theme .navbar {
+    background: var(--text-light);
+}
+
+body.dark-theme .navbar .menu a {
+    color: var(--text-dark);
+}
+
+body.dark-theme .navbar .menu a:hover {
+    color: var(--hover-color);
+}
+
+body.dark-theme form {
+    background: var(--form-background-dark);
+    color: var(--text-dark);
+}
+
+body.dark-theme form input, body.dark-theme form select, body.dark-theme form textarea {
+    background: var(--form-background-dark);
+    color: var(--text-dark);
+    border: 1px solid var(--form-border-dark);
+}
+
+body.dark-theme form button {
+    background: var(--form-border-dark);
+}
+
+body.dark-theme form button:hover {
+    background: var(--form-border-light);
+}
+
+body.dark-theme #response {
+    background: var(--form-background-dark);
+    color: var(--text-dark);
+}
+
+body.dark-theme pre {
+    background: var(--form-background-dark);
+    color: var(--text-dark);
+}

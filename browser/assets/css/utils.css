@@ -1,0 +1,392 @@
+
+
+/* Code format */
+
+body code {
+    font-size: clamp(87.5%, 4vw, 105%);
+}
+
+.codeFormat.g0,.codeFormat.default {
+    color: #77e83e;
+}
+
+.codeFormat.a0 {
+    color: #44ddff;
+}
+
+.codeFormat.a1 {
+    color: #5a44ff;
+}
+
+.codeFormat.r0 {
+    color: #ff4444;
+}
+
+.codeFormat.r1 {
+    color: #ff0000;
+}
+
+.codeFormat.w0 {
+    color: #ffffff;
+}
+
+.codeFormat.w1 {
+    color: #aaaaaa;
+}
+
+.codeFormat.w2 {
+    color: #5d5d5d;
+}
+
+.codeFormat.b0 {
+    color: #000000;
+}
+
+.codeFormat.y0 {
+    color: #fff344;
+}
+
+.codeFormat.y1 {
+    color: #ffee00;
+}
+
+.codeFormat.o0 {
+    color: #ff8000;
+}
+
+.codeFormat.o1 {
+    color: #ff5100;
+}
+
+.codeFormat.p0 {
+    color: #d000ff;
+}
+
+.codeFormat.p1 {
+    color: #dd44ff;
+}
+
+.codeFormat.p2 {
+    color: #ff44e9;
+}
+
+.codeFormat.p3 {
+    color: #ff00e1;
+}
+
+.codeFormat.p4 {
+    color: #d5008e;
+}
+
+/* customWidget from js/utils.js */
+
+.utils-customWidget img::after {
+    content: url('../icons/loading.png');
+    z-index: 1;
+}
+
+.utils-customWidget img {
+    padding-top: 10px;
+    width: 100%;
+}
+
+/* Letras */
+
+.gdfont-Pusab {
+    font-family: Pusab;
+    color: white;
+}
+
+.gdfont-Pusab.normal{
+    text-align: center;
+    font-size: clamp(30px, 5vw, 55px);
+    
+    -webkit-text-stroke: clamp(0.5px,0.4vw,2.2px) black;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.gdfont-Pusab.small{
+    text-align: center;
+    font-size: clamp(15px, 2.2vw, 23px);
+    -webkit-text-stroke: clamp(0.4px,0.3vw,1.5px) black;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Buttons */
+
+.gdsButton {
+    background: linear-gradient(to bottom right, #c7fc57, #47a20d);
+    
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0.3vh solid white;
+    box-shadow: 0 0 0 0.3vh black inset;
+    border-radius: 1.5vh;
+    outline: none;
+    width: auto; 
+    height: auto;
+    color: white; 
+    cursor: pointer;
+    margin: 0.5vh 0 0.5vh 0;
+    transition: all 0.3s;
+    filter: none;
+}
+
+.gdsButton > label {
+    pointer-events: none;
+}
+
+.gdsButton[disabled] {
+    background: linear-gradient(to bottom, #bdc3c7, #95a5a6); 
+    cursor: not-allowed; 
+    filter: grayscale(1);
+}
+
+.gdsButton.red {
+    background: linear-gradient(to bottom right, #de512b, red);
+}
+
+.gdsButton.blue {
+    background: linear-gradient(to bottom right, #0edaff, #39ebfe);
+}
+
+.gdsButton.bluepink {
+    background: linear-gradient(to bottom right, #bd0eff, #3b39fe);
+}
+
+.noclick {
+    pointer-events: none;
+}
+
+.gdsButton[readonly] {
+    pointer-events: none;
+}
+
+.gdsButton:hover,.gdsButton[readonly]:hover {
+    transform: scale(1.05);
+}
+
+/* Checkboxs */
+
+.gdsCheckboxItems {
+    display: flex;
+    align-items: center;
+}
+
+.gdsCheckboxItems > .gdfont-Pusab {
+    margin-left: 5px;
+    margin-right: 0;
+} 
+
+.checkbutton-container {
+  display: inline-block;
+  position: relative;
+  width: clamp(15px, 2.2vw, 23px); 
+  height: clamp(15px, 2.2vw, 23px); 
+  cursor: pointer;
+}
+
+.gdsCheckbox {
+    display: none;
+}
+
+.gdsCheckbox + .checkbutton-container {
+  background-image: url('../../assets/check-off.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.gdsCheckbox:checked + .checkbutton-container {
+  background-image: url('../../assets/check-on.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Inputs */
+
+.gdsInput {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #ffffff;
+    background-clip: padding-box;
+    border: 1px solid transparent;
+    background-color: rgb(90, 48, 32);
+    appearance: none;
+    border-radius: 0.25rem;
+}
+
+.gdsInput.select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    pointer-events: none;
+    overflow-y: hidden;
+}
+
+.gdsInput.select option:checked {
+    display: inline-block;
+    color: white;
+    background-color: transparent;
+    padding: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.gdsInput.select option {
+    display: none;
+}
+
+
+input[type="text"].gdsInput:read-only, input[type="number"].gdsInput:read-only {
+    border: 2.5px solid rgb(126, 126, 126);
+    cursor:not-allowed;
+}
+
+
+/* MUSIC */
+
+.gdMusicDisc {
+    width: 150px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 150px; /* Asegúrate de que el ancho y el alto sean iguales para mantener la forma circular */
+    border-radius: 50%;
+    object-fit: cover; /* Ajusta la imagen dentro del contenedor sin distorsionarla */
+}
+
+/* COLOR PICKER */
+
+.gdColorPicker {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0; 
+}
+
+.gdColorPicker input[type="color"] {
+    -webkit-appearance: none;
+    border: 0.2vh solid black;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 8px;
+    cursor: pointer;
+    outline:0 none;
+    background-color: black;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 0; 
+}
+
+.gdColorPicker input[type="color"]::-webkit-color-swatch {
+    border-radius: 8px; 
+    outline:0 none;
+    padding: 0; 
+}
+
+.gdColorPicker input[type="color"]::-webkit-color-swatch-wrapper {
+    border-radius: 8px;
+    outline:0 none;
+    border: none;
+    padding: 0; 
+}
+
+.gdColorLabel {
+    font-size: 16px;
+    color: #333;
+}
+
+/* CUSTOM FRAMES */
+
+.gdCustomFrame {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    justify-content: center;
+    align-items: center;
+}
+
+.gdCustomFrameAlt {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); 
+    justify-content: center;
+    align-items: center;
+}
+
+.gdCustomFrame > .brownBox {
+    width: 135vh;
+    height: 82%;
+    margin-top: -0.7%;
+    transform: scale(0);
+
+    animation: zoomIn 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) both;
+}
+
+.gdCustomFrame iframe, .gdCustomFrameAlt iframe {
+    
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    /* transform: scale(0);
+    filter: opacity(0.5);
+    animation: zoomIn 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) both; */
+}
+
+.gdCustomFrame iframe.hide {
+    display: none;
+    
+}
+
+.gdCustomFrame iframe.show {
+    display: flex;
+}
+
+.modActionBox {
+    background-color: #0000007d;
+    border-radius: 2vh;
+    padding: 0.5vh;
+    top: -100%;
+    position: relative;
+    margin-bottom: -27%;
+    width: 23vh;
+}
+
+@keyframes zoomIn {
+    from {
+      transform: scale(0);
+      filter: opacity(0.5);
+    }
+    to {
+      transform: scale(1);
+      filter: opacity(1);
+    }
+}
+
+.gdCustomFrame .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-color: red;
+    cursor: pointer;
+    border-radius: 1vh;
+}

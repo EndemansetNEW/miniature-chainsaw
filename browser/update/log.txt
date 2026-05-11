@@ -1,0 +1,198 @@
+Downloading update in ZIP format|1
+Finishing download...|5
+Opening ZIP file update|6
+Extracting ZIP file update|10
+Removing ZIP file update|15
+Repo extracted to: browser/ObeyGDBrowser-1.1-beta.1|20
+Present in new version (update): moderation (directory)|40
+Present in new version (update): moderation/devapps (directory)|40
+Present in new version (update): moderation/devapps/index.php (file)|40
+Present in new version (update): moderation/index.php (file)|40
+Present in new version (update): moderation/webhook (directory)|40
+Present in new version (update): moderation/webhook/index.php (file)|40
+Present in new version (update): level (directory)|40
+Present in new version (update): level/.htaccess (file)|40
+Present in new version (update): level/w.html (file)|40
+Present in new version (update): level/t.html (file)|40
+Present in new version (update): level/index.php (file)|40
+Present in new version (update): level/analyze (directory)|40
+Present in new version (update): level/analyze/index.php (file)|40
+Present in new version (update): gauntlets (directory)|40
+Present in new version (update): gauntlets/.htaccess (file)|40
+Present in new version (update): gauntlets/viewer.php (file)|40
+Present in new version (update): gauntlets/index.php (file)|40
+Present in new version (update): gauntlets/gauntlet.php (file)|40
+Present in new version (update): .htaccess (file)|40
+Present in new version (update): README.md (file)|40
+Present in new version (update): search (directory)|40
+Present in new version (update): search/.htaccess (file)|40
+Present in new version (update): search/search.php (file)|40
+Present in new version (update): search/index.php (file)|40
+Present in new version (update): ogbrowser_init_updater.php (file)|40
+Present in new version (update): customEmbed.php (file)|40
+Present in new version (update): index.php (file)|40
+Present in new version (update): api (directory)|40
+Present in new version (update): api/utils.php (file)|40
+Present in new version (update): api/songs.php (file)|40
+Present in new version (update): api/search.php (file)|40
+Present in new version (update): api/assets.php (file)|40
+Present in new version (update): api/profile.php (file)|40
+Present in new version (update): api/gauntlets.php (file)|40
+Present in new version (update): api/mappacks.php (file)|40
+Present in new version (update): api/index.html (file)|40
+Present in new version (update): api/profileAdv.php (file)|40
+Present in new version (update): api/actions.php (file)|40
+Present in new version (update): api/comments.php (file)|40
+Present in new version (update): api/levels.php (file)|40
+Present in new version (update): api/tokenApps.php (file)|40
+Present in new version (update): api/roles.php (file)|40
+Present in new version (update): api/suggests.php (file)|40
+Present in new version (update): update (directory)|40
+Present in new version (update): update/index.php (file)|40
+Present in new version (update): songs (directory)|40
+Present in new version (update): songs/index.php (file)|40
+Present in new version (update): profile (directory)|40
+Present in new version (update): profile/.htaccess (file)|40
+Present in new version (update): profile/t.html (file)|40
+Present in new version (update): profile/index.php (file)|40
+Present in new version (update): misc (directory)|40
+Present in new version (update): misc/global.js (file)|40
+Present in new version (update): misc/updater.js (file)|40
+Present in new version (update): misc/gdcustomframe.js (file)|40
+Present in new version (update): misc/customselects.js (file)|40
+Present in new version (update): misc/versionadapter.js (file)|40
+Present in new version (update): misc/checkperms.js (file)|40
+Present in new version (update): misc/gdcustomalerts.js (file)|40
+Present in new version (update): misc/analysis (directory)|40
+Present in new version (update): misc/analysis/objects.json (file)|40
+Present in new version (update): misc/analysis/colorProperties.json (file)|40
+Present in new version (update): misc/analysis/initialProperties.json (file)|40
+Present in new version (update): misc/analysis/objectProperties.json (file)|40
+Present in new version (update): misc/analysis/blocks.json (file)|40
+Present in new version (update): misc/fileSaver.js (file)|40
+Present in new version (update): misc/tintheximg.js (file)|40
+Present in new version (update): misc/analyzelvl.js (file)|40
+Present in new version (update): misc/dragscroll.js (file)|40
+Present in new version (update): account (directory)|40
+Present in new version (update): account/logout.php (file)|40
+Present in new version (update): account/checkLogin.php (file)|40
+Present in new version (update): _init_.php (file)|40
+Present in new version (update): comments (directory)|40
+Present in new version (update): comments/.htaccess (file)|40
+Present in new version (update): comments/index.html (file)|40
+Present in new version (update): old_installer.php (file)|40
+Present in new version (update): gdpsettings (directory)|40
+Present in new version (update): gdpsettings/default_gauntlets.json (file)|40
+Present in new version (update): gdpsettings/index.php (file)|40
+Present in new version (update): gdpsettings/official_songs.json (file)|40
+Present in new version (update): nginx.conf (file)|40
+Present in new version (update): assets (directory)|40
+Present in new version (update): assets/css/dashboard.css (file)|40
+Present in new version (update): assets/css/flayers.css (file)|40
+Present in new version (update): assets/css/api.css (file)|40
+Present in new version (update): assets/css/boomlings.css (file)|40
+Present in new version (update): assets/css/loadingalert.css (file)|40
+Present in new version (update): assets/css/browser.css (file)|40
+Present in new version (update): assets/css/iconkit.css (file)|40
+Present in new version (update): assets/css/gdpssettings.css (file)|40
+Present in new version (update): assets/css/utils.css (file)|40
+Present in new version (update): assets/htmlext/_init_hext.php (file)|40
+Present in new version (update): assets/htmlext/loadingalert.php (file)|40
+Present in new version (update): assets/htmlext/flayeralert.php (file)|40
+Present in new version (update): assets/js/utils.js (file)|40
+Present in new version (update): assets/js/securityParser.js (file)|40
+Present in new version (update): assets/js/loadingalert.js (file)|40
+Present in new version (update): assets/js/flayers.js (file)|40
+Present in new version (update): assets/js/api.js (file)|40
+Present in new version (update): mappacks (directory)|40
+Present in new version (update): mappacks/index.php (file)|40
+Present in new version (update): installer.php (file)|40
+File updated: browser/moderation/devapps/index.php|60
+File updated: browser/moderation/index.php|60.194174757282
+File updated: browser/moderation/webhook/index.php|60.388349514563
+File updated: browser/level/.htaccess|60.582524271845
+File updated: browser/level/w.html|60.776699029126
+File updated: browser/level/t.html|60.970873786408
+File updated: browser/level/index.php|61.165048543689
+File updated: browser/level/analyze/index.php|61.359223300971
+File updated: browser/gauntlets/.htaccess|61.553398058252
+File updated: browser/gauntlets/viewer.php|61.747572815534
+File updated: browser/gauntlets/index.php|61.941747572816
+File updated: browser/gauntlets/gauntlet.php|62.135922330097
+File updated: browser/.htaccess|62.330097087379
+File updated: browser/README.md|62.52427184466
+File updated: browser/search/.htaccess|62.718446601942
+File updated: browser/search/search.php|62.912621359223
+File updated: browser/search/index.php|63.106796116505
+File updated: browser/ogbrowser_init_updater.php|63.300970873786
+File updated: browser/customEmbed.php|63.495145631068
+File updated: browser/index.php|63.68932038835
+File updated: browser/api/utils.php|63.883495145631
+File updated: browser/api/songs.php|64.077669902913
+File updated: browser/api/search.php|64.271844660194
+File updated: browser/api/assets.php|64.466019417476
+File updated: browser/api/profile.php|64.660194174757
+File updated: browser/api/gauntlets.php|64.854368932039
+File updated: browser/api/mappacks.php|65.04854368932
+File updated: browser/api/index.html|65.242718446602
+File updated: browser/api/profileAdv.php|65.436893203883
+File updated: browser/api/actions.php|65.631067961165
+File updated: browser/api/comments.php|65.825242718447
+File updated: browser/api/levels.php|66.019417475728
+File updated: browser/api/tokenApps.php|66.21359223301
+File updated: browser/api/roles.php|66.407766990291
+File updated: browser/api/suggests.php|66.601941747573
+File updated: browser/update/index.php|66.796116504854
+File updated: browser/songs/index.php|66.990291262136
+File updated: browser/profile/.htaccess|67.184466019417
+File updated: browser/profile/t.html|67.378640776699
+File updated: browser/profile/index.php|67.572815533981
+File updated: browser/misc/global.js|67.766990291262
+File updated: browser/misc/updater.js|67.961165048544
+File updated: browser/misc/gdcustomframe.js|68.155339805825
+File updated: browser/misc/customselects.js|68.349514563107
+File updated: browser/misc/versionadapter.js|68.543689320388
+File updated: browser/misc/checkperms.js|68.73786407767
+File updated: browser/misc/gdcustomalerts.js|68.932038834951
+File updated: browser/misc/analysis/objects.json|69.126213592233
+File updated: browser/misc/analysis/colorProperties.json|69.320388349515
+File updated: browser/misc/analysis/initialProperties.json|69.514563106796
+File updated: browser/misc/analysis/objectProperties.json|69.708737864078
+File updated: browser/misc/analysis/blocks.json|69.902912621359
+File updated: browser/misc/fileSaver.js|70.097087378641
+File updated: browser/misc/tintheximg.js|70.291262135922
+File updated: browser/misc/analyzelvl.js|70.485436893204
+File updated: browser/misc/dragscroll.js|70.679611650485
+File updated: browser/account/logout.php|70.873786407767
+File updated: browser/account/checkLogin.php|71.067961165049
+File updated: browser/_init_.php|71.26213592233
+File updated: browser/comments/.htaccess|71.456310679612
+File updated: browser/comments/index.html|71.650485436893
+File updated: browser/old_installer.php|71.844660194175
+File updated: browser/gdpsettings/default_gauntlets.json|72.038834951456
+File updated: browser/gdpsettings/index.php|72.233009708738
+File updated: browser/gdpsettings/official_songs.json|72.427184466019
+File updated: browser/nginx.conf|72.621359223301
+File updated: browser/assets/css/dashboard.css|72.815533980583
+File updated: browser/assets/css/flayers.css|73.009708737864
+File updated: browser/assets/css/api.css|73.203883495146
+File updated: browser/assets/css/boomlings.css|73.398058252427
+File updated: browser/assets/css/loadingalert.css|73.592233009709
+File updated: browser/assets/css/browser.css|73.78640776699
+File updated: browser/assets/css/iconkit.css|73.980582524272
+File updated: browser/assets/css/gdpssettings.css|74.174757281553
+File updated: browser/assets/css/utils.css|74.368932038835
+File updated: browser/assets/htmlext/_init_hext.php|74.563106796117
+File updated: browser/assets/htmlext/loadingalert.php|74.757281553398
+File updated: browser/assets/htmlext/flayeralert.php|74.95145631068
+File updated: browser/assets/js/utils.js|75.145631067961
+File updated: browser/assets/js/securityParser.js|75.339805825243
+File updated: browser/assets/js/loadingalert.js|75.533980582524
+File updated: browser/assets/js/flayers.js|75.728155339806
+File updated: browser/assets/js/api.js|75.922330097087
+File updated: browser/mappacks/index.php|76.116504854369
+File updated: browser/installer.php|76.31067961165
+Table 'tokenapp' already created.|90
+Error creating table: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'tokenapp' already exists|90
+Error adding column ogdwCreateTokenApp: SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'ogdwCreateTokenApp'|90
+Flushing update directory: browser/ObeyGDBrowser-1.1-beta.1|100

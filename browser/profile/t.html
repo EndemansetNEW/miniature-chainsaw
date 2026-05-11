@@ -1,0 +1,1007 @@
+<head>
+	<title>[[USERNAME]]'s Profile</title>
+	<meta charset="utf-8">
+	<link href="../assets/css/browser.css?v=14" type="text/css" rel="stylesheet">
+    
+	<link rel="icon" href="" sizes="96x96" type="image/png">
+	<meta id="meta-title" property="og:title" content="[[USERNAME]]'s profile">
+	<meta id="meta-desc" property="og:description" content="Stars: [[STARS]] | Diamonds: [[DIAMONDS]] | Coins: [[COINS]] | User Coins: [[USERCOINS]] | Demons: [[DEMONS]] | CP: [[CP]]">
+	<meta id="meta-image" name="og:image" itemprop="image" content="https://gdbrowser.com/assets/icon.png">
+	<meta name="twitter:card" content="summary">
+	<script>
+		function defaultModImage(img) {
+			img.src = "../assets/moderator/0.png"
+		}
+	</script>
+</head>
+
+<style>
+	.box-subopt {
+		display: flex !important;
+    	justify-content: center;
+		flex-wrap: wrap;
+		/* General */
+		width: 98% !important;
+		background-color: #00000065;
+		border-radius: 2.5vh;
+		padding: 1vh 1vh 1vh 1vh;
+	}
+
+	.box-subopt-checkbox {
+		width: fit-content;
+		display: flex;
+		align-items: center;
+		padding-right: 2.5vh;
+	}
+
+	.box-subopt-checkbox > .gdcheckbox {
+		height: 5vh;
+    	padding: 0vh 6vh 0vh 0vh;
+	}
+
+	.box-subopt > div.gdsButton {
+		width: fit-content !important;
+		min-width: 30%;
+	}
+
+	.box-subopt > div.gdsButton > .gdfont-Pusab {
+		text-wrap: nowrap;
+		text-align: center;
+	}
+
+	#filterStuff div {
+		width: auto !important;
+	}
+
+	#filterStuff > h2.smaller.center {
+		font-size: 3.5vh;
+    	-webkit-text-stroke-width: 0.15vh !important;
+	}
+
+	#profileCBox {
+		background-origin: border-box !important;
+	}
+
+	.rainbowCBox {
+		background: 
+   linear-gradient(rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%) 0 0/100% 200%;
+		
+		animation: rainbow-Profile-Effect 2.5s linear infinite;
+	}
+
+	@keyframes rainbow-Profile-Effect { to {background-position:0 -200%} }
+
+</style>
+
+<body class="levelBG" onbeforeunload="saveUrl()">
+
+<div id="everything">
+
+	<div class="popup" id="leavePost">
+		<div class="brownbox bounce center supercenter" style="height: 68%; width: 110vh">
+			<p style="position:absolute; right: 1vh; margin-top: 0; text-align: left" id="charcount">180</p>
+			<h1 class="smaller center" style="font-size: 5.5vh">Post Update</h1>
+			<textarea placeholder="Insert comment" id="content" maxlength="180" style="margin: 2% 0%"></textarea><br>
+			<form action="nothing lol">
+				<h3 class="center" style="margin-top: 2%">GD Password</h3>
+				<input type="password" id="password" maxlength="50" style="height: 8vh; width: 90%; text-align: center; margin-top: 0.5%">
+			</form>
+			<div style="min-height: 20%; max-height: 20%">
+				<p id="message" style="padding: 0% 10%; margin-top: 2%"></p>
+			</div>
+			<img src="../assets/btn-cancel.png" height=11%; class="postButton gdButton center" style="margin-right: 1%" onclick="$('#leavePost').hide(); $('textarea').val('')">
+			<img src="../assets/btn-submit.png" type="submit" height=11%; class="postButton gdButton center" style="margin-left: 1%" id="submitComment">
+		</div>
+	</div>
+
+	<div class="popup" id="likeComment">
+		<div class="brownbox bounce center supercenter" style="height: 75%; width: 100vh">
+			<h1 class="smaller center" style="font-size: 5.5vh">Vote</h1>
+			<img src="../assets/smashLike.png" id="likebtn" class="inline gdButton likeButton"><!--
+		 --><img src="../assets/smashDislike.png" id="dislikebtn" class="inline gdButton likeButton youAreNotTheOne">
+			<form action="nothing lol">
+				<h3 class="center">GD Username</h3>
+				<input type="text" name="gdbrowser" id="like-username" maxlength="50" style="height: 8vh; width: 90%; text-align: center; margin-top: 0.5%">
+				<h3 class="center" style="margin-top: 2%">GD Password</h3>
+				<input type="password" id="like-password" maxlength="50" style="height: 8vh; width: 90%; text-align: center; margin-top: 0.5%">
+			</form>
+			<div style="min-height: 18%; max-height: 18%">
+				<p id="likeMessage" style="padding: 0% 10%; margin-top: 2.5%"></p>
+			</div>
+			<img src="../assets/btn-cancel.png" height=10%; class="postButton gdButton center" style="margin-right: 1%" onclick="$('#likeComment').hide(); $('#likebtn').trigger('click');">
+			<img src="../assets/btn-submit.png" type="submit" height=10%; class="postButton gdButton center" style="margin-left: 1%" id="submitVote">
+		</div>
+	</div>
+
+
+	<div class="popup" id="profileAdvSettingsPopup">
+		<div class="brownbox bounce center supercenter" style="height: fit-content; width: 120vh">
+			<h3 class="smaller center" style="font-size: 5.5vh">My profile</h3>
+			<div id="filterStuff">
+			
+			<!-- Experimental options stuff -->
+
+			<h2 class="smaller center" style="margin-top: 2%">Experimental</h2>
+			<div class="box-subopt">
+				<h3>No experimental features available</h3>
+			</div>
+
+			<!--  -->
+			
+			<h2 class="smaller center" style="margin-top: 2%">ObeyGDBot</h2>
+			<div class="box-subopt">
+				<div class="gdsButton blue" onclick="OGDBAccountLink()" style="padding-left:1.5vh;padding-right:1.5vh;margin-right: 3vh;height: 5vh; padding-top: 0.8vh; display: flex; justify-content: center;"><h3 class="gdfont-Pusab" style="" id="textContentFileSelect">Discord Link</h3></div>
+			</div>
+
+			<h2 class="smaller center" style="margin-top: 2%">Account Settings</h2>
+			<div class="box-subopt">
+				<div class="gdsButton bluepink" onclick="ProfileCustomization()" style="padding-left:1.5vh;padding-right:1.5vh;margin-right: 3vh;height: 5vh; padding-top: 0.8vh; display: flex; justify-content: center;"><h3 class="gdfont-Pusab" style="" id="textContentFileSelect">Profile Customization</h3></div>
+				<div class="gdsButton" onclick="SocialSettings()" style="padding-left:1.5vh;padding-right:1.5vh;margin-right: 3vh;height: 5vh; padding-top: 0.8vh; display: flex; justify-content: center;"><h3 class="gdfont-Pusab" style="" id="textContentFileSelect">Social Links</h3></div>
+				<div class="gdsButton blue" onclick="SocialPreferences()" style="padding-left:1.5vh;padding-right:1.5vh;margin-right: 3vh;height: 5vh; padding-top: 0.8vh; display: flex; justify-content: center;"><h3 class="gdfont-Pusab" style="" id="textContentFileSelect">Social Preferences</h3></div>
+			</div>
+
+			<h2 class="smaller center" style="margin-top: 2%">ObeyGDBrowser</h2>
+			<div class="box-subopt">
+				<div class="gdsButton" onclick="APIToken()" style="display: none; padding-left:1.5vh;padding-right:1.5vh;margin-right: 3vh;height: 5vh; padding-top: 0.8vh; justify-content: center;"><h3 class="gdfont-Pusab" style="" id="textContentFileSelect">API Token</h3></div>
+				<div class="gdsButton" onclick="CurrentPermissions()" style="padding-left:1.5vh;padding-right:1.5vh;margin-right: 3vh;height: 5vh; padding-top: 0.8vh; display: flex; justify-content: center;"><h3 class="gdfont-Pusab" style="" id="textContentFileSelect">View Current Permissions</h3></div>
+				<div class="gdsButton red" onclick="LogoutAccount()" style="padding-left:1.5vh;padding-right:1.5vh;margin-right: 3vh;height: 5vh; padding-top: 0.8vh;"><h3 class="gdfont-Pusab" style="align-items: center;" id="textContentFileSelect">Logout account</h3></div>
+			</div>
+
+			</div>
+			
+			<div style="display: flex; justify-content: center; margin-top: 5vh;">
+				<div class="gdsButton red closeWindow" id="hideBtn" style="padding-left:1.5vh;padding-right:1.5vh;margin-right: 3vh;height: 5vh; padding-top: 0.8vh;"><h3 class="gdfont-Pusab" style="align-items: center;" id="textContentFileSelect">Back</h3></div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<!-- PROFILES -->
+
+	<div class="popup" id="ogdbProfilesPopup">
+		<form id="formProfilesPopup" autocomplete="off" class="purplebox bounce center supercenter" style="height: 35.5%; width: 100vh">
+			<h3 class="smaller center" style="font-size: 5.5vh">Profile customization</h3>
+			<div id="filterStuff">
+			<input type="text" name="act" value="socialsettings" hidden>
+			<h2 class="smaller center" style="margin-top: 2%">Theme:</h2>
+			<div class="box-subopt" style=""> 
+				<!-- <div><h1 class="box-subopt-checkbox"><input name="themeprofile" value="ogdb" class="checkgroup" type="checkbox" id="box-theme-ogdb"><label for="box-theme-ogdb" class="gdcheckbox gdButton"></label>BG from ObeyGDBot</h1></div> -->
+				<div><h1 class="box-subopt-checkbox"><input name="themeprofile" value="browser-colorful" class="checkgroup" type="checkbox" id="box-theme-colored"><label for="box-theme-colored" class="gdcheckbox gdButton"></label>Colorful BG</h1></div>
+				<div><h1 class="box-subopt-checkbox"><input name="themeprofile" value="browser-rainbow" class="checkgroup" type="checkbox" id="box-theme-rainbow"><label for="box-theme-rainbow" class="gdcheckbox gdButton"></label>Rainbow BG</h1></div>
+				<div><h1 class="box-subopt-checkbox"><input name="themeprofile" value="browser-default" class="checkgroup" type="checkbox" id="box-theme-default"><label for="box-theme-default" class="gdcheckbox gdButton"></label>Themed</h1></div>
+				<div><h1 class="box-subopt-checkbox"><input name="themeprofile" value="browser-brown" class="checkgroup" type="checkbox" id="box-theme-brown"><label for="box-theme-brown" class="gdcheckbox gdButton"></label>Default brown</h1></div>
+			</div>
+
+			</div>
+			
+			<div style="display: flex; justify-content: center; margin-top: 3vh;">
+				<div class="gdsButton red closeWindow" id="hideBtn" style="padding-left:1.5vh;padding-right:1.5vh;margin-right: 3vh;height: 5vh; padding-top: 0.8vh;"><h3 class="gdfont-Pusab" style="align-items: center;" id="textContentFileSelect">Back</h3></div>
+				<div class="gdsButton blue submitProfileCustomForm" style="padding-left:1.5vh;padding-right:1.5vh;margin-right: 3vh;height: 5vh; padding-top: 0.8vh;"><h3 class="gdfont-Pusab" style="align-items: center;" id="textContentFileSelect">Update</h3></div>
+			</div>
+		</form>
+	</div>
+
+	<!-- OBEYGDBOT SETTINGS -->
+
+	<div class="popup" id="ogdbDiscordLinkPopup">
+		<form id="formDiscordLink" autocomplete="off" class="bluebox bounce center supercenter" style="height: 40%; width: 95vh">
+			<input type="text" name="act" value="discord" hidden>
+			<h3 class="smaller center" style="font-size: 5.5vh">Link your Discord!</h3>
+			<div id="filterStuff">
+			
+			<h2 class="smaller center" style="margin-top: 2%">Discord ID</h2>
+			<div class="box-subopt" style="background-color: transparent;">
+				<input type="number" name="id" id="ogdbdiscordID" min="1" style="height: 8vh; width: 90%; text-align: center; margin-top: 0.5%; margin-bottom: 1.5vh;">
+				<div><h1 class="box-subopt-checkbox"><input class="box-auto" type="checkbox" name="discordLinkReq" value="1" id="box-ogdb-enablelink"><label for="box-ogdb-enablelink" class="gdcheckbox gdButton"></label>Discord Icon in Profile</h1></div>
+			</div>
+
+			</div>
+			
+			<div style="display: flex; justify-content: center; margin-top: 3vh;">
+				<div class="gdsButton red closeWindow" id="hideBtn" style="padding-left:1.5vh;padding-right:1.5vh;margin-right: 3vh;height: 5vh; padding-top: 0.8vh;"><h3 class="gdfont-Pusab" style="align-items: center;" id="textContentFileSelect">Back</h3></div>
+				<div class="gdsButton blue submitForm" style="padding-left:1.5vh;padding-right:1.5vh;margin-right: 3vh;height: 5vh; padding-top: 0.8vh;"><h3 class="gdfont-Pusab" style="align-items: center;" id="textContentFileSelect">Update</h3></div>
+			</div>
+		</form>
+	</div>
+
+	<!-- ACCOUNT SETTINGS -->
+
+	<div class="popup" id="socialLinksPopup">
+		<form id="formLinksPopup" autocomplete="off" class="purplebox bounce center supercenter" style="height: 70.5%; width: 95vh">
+			<input type="text" name="act" value="sociallinks" hidden>
+			<h3 class="smaller center" style="font-size: 5.5vh">Social Links</h3>
+			<div id="filterStuff">
+			
+			<h2 class="smaller center" style="margin-top: 2%">YouTube</h2>
+			<div class="box-subopt" style="background-color: transparent;">
+				<input type="text" name="youtube" id="socialYoutube" maxlength="255" placeholder="youtube.com/" style="height: 8vh; width: 90%; text-align: center; margin-top: 0.5%; margin-bottom: 1.5vh;">
+			</div>
+
+			<h2 class="smaller center" style="margin-top: 2%">Twitter</h2>
+			<div class="box-subopt" style="background-color: transparent;">
+				<input type="text" name="twitter" id="socialTwitter" maxlength="255" placeholder="twitter.com/" style="height: 8vh; width: 90%; text-align: center; margin-top: 0.5%; margin-bottom: 1.5vh;">
+			</div>
+
+			<h2 class="smaller center" style="margin-top: 2%">Twitch</h2>
+			<div class="box-subopt" style="background-color: transparent;">
+				<input type="text" name="twitch" id="socialTwitch" maxlength="255" placeholder="twitch.tv/" style="height: 8vh; width: 90%; text-align: center; margin-top: 0.5%; margin-bottom: 1.5vh;">
+			</div>
+
+			</div>
+			
+			<div style="display: flex; justify-content: center; margin-top: 3vh;">
+				<div class="gdsButton red closeWindow" id="hideBtn" style="padding-left:1.5vh;padding-right:1.5vh;margin-right: 3vh;height: 5vh; padding-top: 0.8vh;"><h3 class="gdfont-Pusab" style="align-items: center;" id="textContentFileSelect">Back</h3></div>
+				<div class="gdsButton blue submitForm" style="padding-left:1.5vh;padding-right:1.5vh;margin-right: 3vh;height: 5vh; padding-top: 0.8vh;"><h3 class="gdfont-Pusab" style="align-items: center;" id="textContentFileSelect">Update</h3></div>
+			</div>
+		</form>
+	</div>
+
+	<div class="popup" id="socialPreferencesPopup">
+		<form id="formPreferencesPopup" autocomplete="off" class="purplebox bounce center supercenter" style="height: 56.5%; width: 100vh">
+			<h3 class="smaller center" style="font-size: 5.5vh">Social Preferences</h3>
+			<div id="filterStuff">
+			<input type="text" name="act" value="socialsettings" hidden>
+			<h2 class="smaller center" style="margin-top: 2%">Allow messages from:</h2>
+			<div class="box-subopt" style=""> 
+				<div><h1 class="box-subopt-checkbox"><input name="messages" value="0" class="checkgroup" type="checkbox" id="box-msg-all"><label for="box-msg-all" class="gdcheckbox gdButton"></label>All</h1></div>
+				<div><h1 class="box-subopt-checkbox"><input name="messages" value="1" class="checkgroup" type="checkbox" id="box-msg-friends"><label for="box-msg-friends" class="gdcheckbox gdButton"></label>Friends</h1></div>
+				<div><h1 class="box-subopt-checkbox"><input name="messages" value="2" class="checkgroup" type="checkbox" id="box-msg-none"><label for="box-msg-none" class="gdcheckbox gdButton"></label>None</h1></div>
+			</div>
+
+			<h2 class="smaller center" style="margin-top: 2%">Allow friend requests from:</h2>
+			<div class="box-subopt" style="">
+				<div><h1 class="box-subopt-checkbox"><input name="requests" value="0" class="checkgroup" type="checkbox" id="box-fr-all"><label for="box-fr-all" class="gdcheckbox gdButton"></label>All</h1></div>
+				<div><h1 class="box-subopt-checkbox"><input name="requests" value="1" class="checkgroup" type="checkbox" id="box-fr-none"><label for="box-fr-none" class="gdcheckbox gdButton"></label>None</h1></div>
+			</div>
+
+			<h2 class="smaller center" style="margin-top: 2%">Show comment history to:</h2>
+			<div class="box-subopt" style="">
+				<div><h1 class="box-subopt-checkbox"><input name="history" value="0" class="checkgroup" type="checkbox" id="box-ch-all"><label for="box-ch-all" class="gdcheckbox gdButton"></label>All</h1></div>
+				<div><h1 class="box-subopt-checkbox"><input name="history" value="1" class="checkgroup" type="checkbox" id="box-ch-friends"><label for="box-ch-friends" class="gdcheckbox gdButton"></label>Friends</h1></div>
+				<div><h1 class="box-subopt-checkbox"><input name="history" value="2" class="checkgroup" type="checkbox" id="box-ch-none"><label for="box-ch-none" class="gdcheckbox gdButton"></label>None</h1></div>
+			</div>
+
+			</div>
+			
+			<div style="display: flex; justify-content: center; margin-top: 3vh;">
+				<div class="gdsButton red closeWindow" id="hideBtn" style="padding-left:1.5vh;padding-right:1.5vh;margin-right: 3vh;height: 5vh; padding-top: 0.8vh;"><h3 class="gdfont-Pusab" style="align-items: center;" id="textContentFileSelect">Back</h3></div>
+				<div class="gdsButton blue submitForm" style="padding-left:1.5vh;padding-right:1.5vh;margin-right: 3vh;height: 5vh; padding-top: 0.8vh;"><h3 class="gdfont-Pusab" style="align-items: center;" id="textContentFileSelect">Update</h3></div>
+			</div>
+		</form>
+	</div>
+
+	<!-- OBEYGDBROWSER OPTIONS -->
+
+	<div class="popup" id="LogoutAccountPopup" style="z-index: 100;">
+		<div class="graybox bounce center supercenter" style="width: 75vh; height: 35%;">
+			<h2 class="smaller center" style="font-size: 5.5vh; margin-top: 1%; display: block;">Logout</h2>
+				<input type="text" name="act" value="delete" hidden>
+				<p class="bigger center" style="line-height: 5vh; margin-top: 1.5vh;">
+					Are you sure you want to unlink your account?<br><cr>This action remove all current ObeyGDBrowser settings.</cr>
+				</p>
+				<img class="gdButton center closeWindow" src="../assets/btn-no.png" height=20%;>
+				<img onclick="confirmLogout()" src="../assets/btn-yes.png"  height=20%; >
+		</div>
+	</div>
+
+	<!-- END -->
+	
+	<div class="popup" id="settingsDiv">
+		<div class="fancybox bounce center supercenter">
+			<h2 class="smaller center" style="font-size: 5.5vh">User Info</h2>
+			<p class="bigger center" id="userInfo" style="line-height: 5vh; margin-top: 1.5vh;">
+				Friend Requests: [[REQS]]<br>
+				Private Messages: [[DMS]]<br>
+				Comment History: [[COMMENTS]]<br>
+			</p>
+			<img src="../assets/ok.png" width=20%; class="gdButton center" onclick="$('#settingsDiv').hide()">
+		</div>
+	</div>
+
+	<div class="popup" id="featuredBlockedDiv">
+		<div class="fancybox bounce center supercenter">
+			<h2 class="smaller center" style="font-size: 5.5vh">WIP</h2>
+			<p class="bigger center" id="userInfo" style="line-height: 5vh; margin-top: 1.5vh;">
+				This feature is <cr>not finished</cr>, wait for <cg>future updates!</cg><br>
+			</p>
+			<img src="../assets/ok.png" width=20%; class="gdButton center" onclick="$('#featuredBlockedDiv').hide()">
+		</div>
+	</div>
+
+	<div style="position:absolute; bottom: 0%; left: 0%; width: 100%">
+		<img class="cornerPiece" src="../assets/corner.png" width=7%;>
+	</div>
+
+	<div style="position:absolute; bottom: 0%; right: 0%; width: 100%; text-align: right;">
+		<img class="cornerPiece" src="../assets/corner.png" width=7%; style="transform: scaleX(-1)">
+	</div>
+
+	<div style="position:absolute; top: 2%; left: 1.5%; width: 10%; height: 25%; pointer-events: none">
+		<img class="gdButton yesClick" id="backButton" src="../assets/back.png" height="30%" onclick="backButton()">
+	</div>
+
+	
+	<div class="brownBox center supercenter assetprofileImage" style="width: 135vh; height: 82%; margin-top: -0.7%;" id="profileCBox">
+
+		<div id="globalrank0" style="position: absolute; left: 0.3%; top: 1.5%; width: 18%; text-align: left">
+			<p style="margin: 0;"><img src="../assets/trophy.png" class="inline valign help profileTrophy" width="22%" title="Global Rank"> [[RANK]]</p>
+		</div>
+
+		<h1 class="veryBig inline" style="width: inherit">
+			<img class="inline valign" id="modBadge" modLevel="[[MODERATOR]]" onerror="defaultModImage(this)" style="display: none; height: 7vh;" src="../assets/moderator/[[MODERATOR]].png">
+			<span style="">[[USERNAME]]</span>
+		</h1>
+		
+		<hr style="margin-bottom: 2%" class="profilePostHide">
+		<h3 id="collectibles" class="profilePostHide">
+			<span id="stars">[[STARS]]</span> <img class="help valign" src="../assets/star.png" title="Stars">
+			<span id="moons">[[MOONS]]</span> <img class="help valign" src="../assets/moon.png" title="Moons">
+			<span id="diamonds">[[DIAMONDS]]</span> <img class="help valign" src="../assets/diamond.png" title="Diamonds">
+			<span id="coins">[[COINS]]</span> <img class="help valign" src="../assets/coin.png" title="Secret Coins">
+			<span id="usercoins">[[USERCOINS]]</span> <img class="help valign"src="../assets/silvercoin.png" title="User Coins">
+			<span id="demons">[[DEMONS]]</span> <img class="help valign"src="../assets/demon.png" title="Demons">
+			<span id="creatorpoints" style="display: none"><span id="cp">[[CP]]</span> <img class="help valign" src="../assets/cp.png" title="Creator Points"></span>
+		</h3>
+
+		<div class="lightBox center profilePostHide" id="iconsDiv" style="margin: 2% auto; width: 105vh">
+			<gdicon iconID=[[CUBE]] iconForm="cube" col1="[[COL1]]" col2="[[COL2]]" colg="[[COLG]]" glow="[[GLOW]]" id="mainIcon"></gdicon>
+			<gdicon iconID=[[SHIP]] iconForm="ship" col1="[[COL1]]" col2="[[COL2]]" colg="[[COLG]]" glow="[[GLOW]]" imgStyle="height: 7%"></gdicon>
+			<gdicon iconID=[[BALL]] iconForm="ball" col1="[[COL1]]" col2="[[COL2]]" colg="[[COLG]]" glow="[[GLOW]]"></gdicon>
+			<gdicon iconID=[[UFO]] iconForm="ufo" col1="[[COL1]]" col2="[[COL2]]" colg="[[COLG]]" glow="[[GLOW]]"></gdicon>
+			<gdicon iconID=[[WAVE]] iconForm="wave" col1="[[COL1]]" col2="[[COL2]]" colg="[[COLG]]" glow="[[GLOW]]" imgStyle="height: 6%"></gdicon>
+			<gdicon iconID=[[ROBOT]] iconForm="robot" col1="[[COL1]]" col2="[[COL2]]" colg="[[COLG]]" glow="[[GLOW]]"></gdicon>
+			<gdicon iconID=[[SPIDER]] iconForm="spider" col1="[[COL1]]" col2="[[COL2]]" colg="[[COLG]]" glow="[[GLOW]]"></gdicon>
+			<gdicon iconID=[[SWING]] iconForm="swing" col1="[[COL1]]" col2="[[COL2]]" colg="[[COLG]]" glow="[[GLOW]]"></gdicon>
+			<gdicon iconID=[[JETPACK]] iconForm="jetpack" col1="[[COL1]]" col2="[[COL2]]" glow="[[GLOW]]"></gdicon>
+			<img src="../assets/deatheffects/[[DEATHEFFECT]].png" title="Death Effect [[DEATHEFFECT]]" id="deatheffect">
+		</div>
+
+		<div class="lightBox center dragscroll" id="statusDiv" normalHeight="36vh" compactHeight="69vh" style="margin: 2% auto; width: 105vh; height: 36vh; background-color: #BE6F3F">
+		</div>
+
+		<div class="center profilePostHide" style="margin: 1.5% auto 2.5% auto;">
+			<a id="msgA" target="_blank"><img src="../assets/messages.png" height="10%" id="msgButton" class="sideSpace gdButton hidemeprofile" onclick="$('#featuredBlockedDiv').show()"></a>
+			<img src="../assets/friends.png" height="10%" id="friendButton" class="sideSpace gdButton hidemeprofile" onclick="$('#featuredBlockedDiv').show()">
+			<img src="../assets/settingsbutton.png" style="display: none;" height="10%" id="settingsProfileButton" class="sideSpace gdButton" onclick="viewAdvProfile()">
+		</div>
+
+		<div style="position: absolute; bottom: 0%; left: 12%;" class="profilePostHide">
+			<p style="text-align: left; font-size: 2.2vh; color: rgba(0, 0, 0, 0.5)">Account ID: [[ACCOUNTID]]<br>Player ID: [[PLAYERID]]<br>Last Played: [[LASTPLAYED]]</p>
+		</div>
+
+		<img src="../assets/follow-off.png" id="followOff" class="gdButton profilePostHide" style="position: absolute; left: 4.5%; bottom: 1%; width: 6%">
+		<img src="../assets/follow-on.png"  id="followOn"  class="gdButton profilePostHide" style="position: absolute; left: 4.5%; bottom: 1%; width: 6%; display: none">
+	
+		<a id="commentA"><img src="../assets/comments.png" class="gdButton" id="commentButton" style="position: absolute; right: 0.5%; bottom: 50%; width: 6%" onclick="$('#featuredBlockedDiv').show()"></a>
+		<img src="../assets/expanded-off.png" class="gdButton" id="compactMode" style="position: absolute; left: 2%; bottom: 45%; width: 6%">
+
+		<a href="../search/search.php?s=0&user=[[PLAYERID]]"><img src="../assets/levels.png" class="gdButton" style="position: absolute; right: 0.5%; bottom: 1%; width: 6%"></a>
+
+		<div style="position: absolute; right: 0.5%; top: 0%; width: 6%; display: flex; flex-direction: column;" class="socialButtonsProfile">
+			<a id="youtube" style="display: none" target="_blank" href="https://youtube.com/channel/[[YOUTUBE]]"><img src="../assets/social/youtube.png" class="gdButton socialButton"></a>
+			<a id="twitter" style="display: none" target="_blank" href="https://twitter.com/[[TWITTER]]"><img src="../assets/social/twitter.png" class="gdButton socialButton"></a>
+			<a id="twitch"  style="display: none" target="_blank" href="https://twitch.tv/[[TWITCH]]"><img src="../assets/social/twitch.png" class="gdButton socialButton"></a>
+			<a id="discord"  style="display: none" target="_blank" href="https://discord.com/users/[[DISCORD]]"><img src="../assets/social/discord.png" class="gdButton socialButton"></a>
+		</div>
+
+		<div class="supercenter" style="left: 5%; top: 65%; height: 10%">
+			<img class="gdButton" id="pageDown" style="display: none" src="../assets/arrow-left.png" height="95%" onclick="page -= 1; appendComments()">
+		</div>
+	
+		<div class="supercenter" style="left: 95%; top: 65%; height: 10%;">
+			<img class="gdButton" id="pageUp" src="../assets/arrow-right.png" height="95%" onclick="page += 1; appendComments()">
+		</div>
+
+		<div id="superCloseButton" style="position:absolute; bottom: 0%; left: 0%; width: 14%; text-align: left; transform: translate(-35%, -665%)">
+			<img class="gdButton" src="../assets/close.png" width="60%" onclick="closeMessageCustomFrame()">
+		</div>
+
+		<div id="postButton" style="position:absolute; bottom: 0%; left: 0%; width: 14%; text-align: left; transform: translate(-35%, 40%);">
+			<!-- <img class="gdButton" src="../assets/comment.png" width="60%" onclick="$('#content').trigger('input'); $('#leavePost').show();"> -->
+		</div>
+
+	</div>
+
+</div>
+
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/6.2.2/browser/pixi.js"></script>
+<!-- <script type="text/javascript" src="../iconkit/icon.js"></script> -->
+<script type="text/javascript" src="../misc/global.js?v=6"></script>
+<script type="text/javascript" src="../misc/dragscroll.js"></script>
+<script type="text/javascript" src="../misc/gdcustomframe.js"></script>
+<script>
+$('#mainIcon').on('DOMNodeInserted', 'img', function () {
+	$("link[rel='icon']").attr("href", $(this).attr("src"));
+});
+$("#loading-main").hide();
+</script>
+
+<script>
+
+let userPermissions = [[USERPERMISSIONS]];
+
+function submitChanges() {
+	CreateFLAlert("Saved!","Options saved!")
+}
+
+document.addEventListener('loadedTheme', function(e) {
+	console.log("Reloaded due theme");
+    getColors();
+});
+
+function getColors() {
+	if(localStorage.getItem('profileTheme') == "colored"){
+
+		fetch('../assets/json/colors.json')
+		.then(response => {
+			if (!response.ok) {
+				throw new Error('Error loading JSON');
+			}
+			return response.json(); 
+		})
+		.then(data => {
+
+			let col1 = data[Number("[[COL1]]")];
+			let col2 = data[Number("[[COL2]]")];
+			let colg = data[Number("[[COLG]]")];
+
+			recolorProfile(col1,col2,colg)
+		})
+		.catch(error => {
+			console.error('JSON Error:', error);
+		});
+
+	} else if(localStorage.getItem('profileTheme') == 'rainbow') {
+		rainbowProfile()
+	} else if(localStorage.getItem('profileTheme') == 'brown'){
+		defaultProfile(true)
+	} else { // Default
+		defaultProfile(false)
+	}
+}
+
+function recolorProfile(col1,col2,colg) {
+	$("#profileCBox").removeClass('brownBox');
+	$("#profileCBox").removeClass('rainbowCBox');
+	$("#profileCBox").addClass('invisibleBox');
+	$("#profileCBox").removeClass('customBox');
+	
+	col1 = `rgb(${col1.r},${col1.g},${col1.b})`;
+	col2 = `rgb(${col2.r},${col2.g},${col2.b})`;
+	// colg = `rgb(${colg.r},${colg.g},${colg.b})`;
+
+	$("#profileCBox").css({'background': `linear-gradient(to bottom, ${col1}, ${col2})`, 'background-size': '', 'background-repeat': '', 'background-position': ''})
+	$("#iconsDiv").css({'background-color': `#0000007a`, 'border': '0.2vh solid #000000bf'})
+	$("#statusDiv").css({'background-color': `#0000007a`, 'border': '0.2vh solid #000000bf'})
+	
+
+	$('.commentBG').css({'background-color': 'transparent'});
+	$('.commentBG:nth-child(odd)').css({'background-color': '#0000007a'});
+	$('.comment').css({'background-color': '#0000007a'});
+	$('.commentDate').css({'color': 'white'});
+
+}
+
+function rainbowProfile() {
+	$("#profileCBox").removeClass('brownBox');
+	$("#profileCBox").addClass('invisibleBox');
+	$("#profileCBox").addClass('rainbowCBox');
+	$("#profileCBox").removeClass('customBox');
+
+	$("#profileCBox").css({'background': ``, 'background-size': '', 'background-repeat': '', 'background-position': ''})
+	$("#iconsDiv").css({'background-color': `#0000007a`, 'border': '0.2vh solid #000000bf'})
+	$("#statusDiv").css({'background-color': `#0000007a`, 'border': '0.2vh solid #000000bf'})
+	
+
+	$('.commentBG').css({'background-color': 'transparent'});
+	$('.commentBG:nth-child(odd)').css({'background-color': '#0000007a'});
+	$('.comment').css({'background-color': '#0000007a'});
+	$('.commentDate').css({'color': 'white'});
+}
+
+function ogdbColorProfile(urlProfile,custom=false) {
+
+	$("#profileCBox").removeClass('brownBox');
+	$("#profileCBox").removeClass('rainbowCBox');
+	$("#profileCBox").addClass('invisibleBox');
+
+	if(custom) {
+		$("#profileCBox").addClass('customBox');
+		$("#profileCBox").css({ 'background-image': `` });
+	} else {
+		$("#profileCBox").css({ 'background-image': `url('${urlProfile}')` })
+	}
+
+	$("#profileCBox").css({'background': '', 'background-size': 'cover', 'background-repeat': 'no-repeat', 'background-position': 'center'})
+	$("#iconsDiv").css({'background-color': `#0000007a`, 'border': '0.2vh solid #000000bf'})
+	$("#statusDiv").css({'background-color': `#0000007a`, 'border': '0.2vh solid #000000bf'})
+	
+
+	$('.commentBG').css({'background-color': 'transparent'});
+	$('.commentBG:nth-child(odd)').css({'background-color': '#0000007a'});
+	$('.comment').css({'background-color': '#0000007a'});
+	$('.commentDate').css({'color': 'white'});
+
+	console.log('done OGDB');
+}
+
+
+function defaultProfile(ignoreTheme=false) {
+
+	console.log("test2:", hasThemeBrowser);
+	console.log("test:", ignoreTheme);
+
+	if(hasThemeBrowser == true && ignoreTheme == false) {
+		console.log("Theme Profile Defined")
+		ogdbColorProfile('',true);
+		return;
+	} 
+
+	$("#profileCBox").addClass('brownBox');
+	$("#profileCBox").removeClass('invisibleBox');
+	$("#profileCBox").removeClass('rainbowCBox');
+
+	$("#profileCBox").css({'background': ``})
+	$("#iconsDiv").css({'background-color': ``, 'border': ''})
+	$("#statusDiv").css({'background-color': ``, 'border': ''})
+	
+
+	$('.commentBG').css({'background-color': ''});
+	$('.commentBG:nth-child(odd)').css({'background-color': ''});
+	$('.comment').css({'background-color': ''});
+	$('.commentDate').css({'color': ''});
+}
+
+
+
+
+function clean(text) {return text.replace(/&/g, "&#38;").replace(/</g, "&#60;").replace(/>/g, "&#62;").replace(/=/g, "&#61;").replace(/"/g, "&#34;").replace(/'/g, "&#39;")}
+
+// remove ID from URL
+if (window.location.pathname.endsWith(".")) window.history.pushState({}, null, window.location.origin + `/u/[[USERNAME]]`);
+
+if (new URLSearchParams(window.location.search).has('gdframe') || "[[GDFRAME]]" === "TRUE") {
+	if("[[ME]]" == "1") {
+		$('#settingsProfileButton').show();
+		$('.hidemeprofile').hide();
+	}
+} else {
+	$('#superCloseButton').hide();
+	$('#settingsProfileButton').hide();
+}
+
+function CurrentPermissions() {
+	const desc = userPermissions.map(item => `- ${item}`).join('\n');
+	CreateFLAlert("[[USERNAME]] Permissions",`# List of permissions\n${desc}`)
+}
+
+function SocialSettings() {
+	if (`[[YOUTUBE]]` != "null") $('#socialYoutube').val("[[YOUTUBE]]");
+	if (`[[TWITTER]]` != "null") $('#socialTwitter').val("[[TWITTER]]");
+	if (`[[TWITCH]]` != "null")  $('#socialTwitch').val("[[TWITCH]]");
+
+	$('#socialLinksPopup').show()
+}
+
+function SocialPreferences() {
+	$('#socialPreferencesPopup').show()
+
+	function setSocialCheckbox(selector, value) {
+		if (value == "all") { $(selector + '-all').prop('checked', true);
+		} else if (value == "friends") { $(selector + '-friends').prop('checked', true);
+		} else { $(selector + '-none').prop('checked', true); }
+	}
+
+	setSocialCheckbox('#box-msg', "[[MESSAGES]]");
+	setSocialCheckbox('#box-ch', "[[COMMENTHISTORY]]");
+
+	if ("[[FRIENDREQUESTS]]" == "all") { $('#box-fr-all').prop('checked', true); }
+	else { $('#box-fr-none').prop('checked', true); }
+}
+
+function ProfileCustomization() {
+	if(localStorage.getItem('profileTheme') == "colored") $('#box-theme-colored').prop('checked', true);
+	else if(localStorage.getItem('profileTheme') == "rainbow") $('#box-theme-rainbow').prop('checked', true);
+	else if(localStorage.getItem('profileTheme') == "brown") $('#box-theme-brown').prop('checked', true);
+	else $('#box-theme-default').prop('checked', true);
+	$('#ogdbProfilesPopup').show()
+}
+
+$('.submitProfileCustomForm').click(function() {
+	document.dispatchEvent(new Event('initLoadingAlert'));
+
+	if($('#box-theme-colored').is(":checked")){ localStorage.setItem('profileTheme','colored')}
+	else if($('#box-theme-rainbow').is(":checked")){ localStorage.setItem('profileTheme','rainbow')}
+	else if($('#box-theme-brown').is(":checked")){ localStorage.setItem('profileTheme','brown')}
+	else { localStorage.setItem('profileTheme','default') }
+
+	changeLoadingAlert(`Profile Customized`,"done");
+	getColors();
+	setTimeout(function() { document.dispatchEvent(new Event('finishLoadingAlert')); }, 1200);
+})
+
+
+function OGDBAccountLink() {
+	if("[[DISCORDRAW]]" != "0") {
+		$("#ogdbdiscordID").val("[[DISCORDRAW]]");
+	}
+	if("[[DISCORDRAWREQ]]" != "0") {
+		$("#box-ogdb-enablelink").prop('checked',true);
+	}
+	$('#ogdbDiscordLinkPopup').show()
+}
+
+function viewAdvProfile() {
+	$('#profileAdvSettingsPopup').show()
+}
+
+function LogoutAccount() {
+	$('#LogoutAccountPopup').show()
+}
+
+function confirmLogout() {
+	$('#loading-main').show();
+	fetch('../account/logout.php', {
+            method: 'GET',
+			credentials: 'include'
+        })
+        .then(response => response.text())
+        .then(data => {
+			localStorage.clear();
+			sessionStorage.clear();
+			closeandrestartMessageCustomFrame();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+renderIcons()
+
+
+let messageText = 'Your <cy>Geometry Dash password</cy> will <cg>not be stored</cg> anywhere on the site, both <ca>locally and server-side.</ca> You can view the code used for profile posts <a class="menuLink" target="_blank" href="https://github.com/GDColon/GDBrowser/blob/master/api/post/postProfileComment.js">here</a>.'
+$('#message').html(messageText)
+$('#likeMessage').html(messageText.replace("profile posts", "liking posts").replace("postProfileComment", "like"))
+
+
+if ("[[MODERATOR]]" > 0) $('#modBadge').show()
+
+$('#globalrank[[RANK]]').hide()
+
+
+
+let followed = localStorage.followed ? JSON.parse(localStorage.followed) : []
+if (followed.includes([[ACCOUNTID]])) {$('#followOff').hide(); $('#followOn').show()}
+
+$('#followOff').click(function() {
+	followed = localStorage.followed ? JSON.parse(localStorage.followed) : []
+	followed.push([[ACCOUNTID]])
+	localStorage.followed = JSON.stringify(followed)
+	$('#followOff').hide()
+	$('#followOn').show()
+})
+
+$('#followOn').click(function() {
+	followed = localStorage.followed ? JSON.parse(localStorage.followed) : []
+	localStorage.followed = JSON.stringify(followed.filter(x => x != '[[ACCOUNTID]]'))
+	$('#followOff').show()
+	$('#followOn').hide()
+})
+
+if ([[DIAMONDS]] >= 65535) $('#diamonds').addClass('blue')
+if ([[COINS]] >= 149) $('#coins').addClass('yellow')
+if ([[STARS]] >= 100000) $('#stars').addClass('yellow')
+if ([[DEMONS]] >= 1000) $('#demons').addClass('brightred')
+if ([[USERCOINS]] >= 10000) $('#usercoins').addClass('brightblue')
+if ([[CP]] >= 100) $('#cp').addClass('yellow')
+if ([[CP]] > 0) $('#creatorpoints').show()
+
+if (`[[YOUTUBE]]` != "null") $('#youtube').show()
+if (`[[TWITTER]]` != "null") $('#twitter').show()
+if (`[[TWITCH]]` != "null")  $('#twitch').show()
+if (`[[DISCORD]]` != "null")  $('#discord').show()
+
+let numRank = parseInt("[[RANK]]")
+if (numRank < 2) $(".profileTrophy").attr("src","../assets/trophies/1.png")
+else if (numRank <= 10) $(".profileTrophy").attr("src","../assets/trophies/2.png")
+else if (numRank <= 50 ) $(".profileTrophy").attr("src","../assets/trophies/3.png")
+else if (numRank <= 100) $(".profileTrophy").attr("src","../assets/trophies/4.png")
+else if (numRank <= 200) $(".profileTrophy").attr("src","../assets/trophies/5.png")
+else if (numRank <= 500) $(".profileTrophy").attr("src","../assets/trophies/6.png")
+else if (numRank <= 1000) $(".profileTrophy").attr("src","../assets/trophies/7.png")
+else $(".profileTrophy").attr("src","../assets/trophies/0.png")
+
+let messages = "[[MESSAGES]]"
+let commenthistory = "[[COMMENTHISTORY]]"
+
+let reqMode = [[FRIENDREQUESTS]] ? "<cg>Enabled</cg>" : "<cr>Disabled</cr>"
+let dmMode = messages == "all" ? "<cg>Public</cg>" : messages == "friends" ? "<cy>Friends Only</cy>" : "<cr>Disabled</cr>"
+let commentMode = commenthistory == "all" ? "<cg>Public</cg>" : commenthistory == "friends" ? "<cy>Friends Only</cy>" : "<cr>Disabled</cr>"
+
+if (commenthistory == "friends") $('#commentButton').attr('src', '../assets/comments-yellow.png')
+else if (commenthistory == "off") $('#commentButton').attr('src', '../assets/comments-grey.png')
+else {
+	$('#commentButton').attr('src', '../assets/comments.png').attr('onclick', '')
+	// $('#commentA').attr('href', '../comments/[[USERNAME]]')
+}
+
+if (messages == "all") {
+	$('#msgButton').attr('onclick', '')
+	// $('#msgA').attr('href', '../messages?sendTo=[[USERNAME]]')
+}
+
+if (messages == "friends") $('#msgButton').attr('src', '../assets/messages-yellow.png')
+else if (messages == "off") $('#msgButton').attr('src', '../assets/messages-grey.png')
+
+if (![[FRIENDREQUESTS]]) $('#friendButton').attr('src', '../assets/friends-grey.png')
+
+$('#userInfo').html($('#userInfo').html()
+.replace("[[REQS]]", reqMode)
+.replace("[[DMS]]", dmMode)
+.replace("[[COMMENTS]]", commentMode) + (messages == "friends" ? "<br style='line-height: 69%'><a target='_blank' style='color: lime' class='youCanClickThis2' href='../messages?sendTo=[[USERNAME]]'>Send message</a><br>(if friended)" : ""))
+
+function appendComments() {
+	if (loadingComments) return;
+	else loadingComments = true;
+
+	$('#statusDiv').html(`<div class="supercenter" id="loading" style="height: 12%; top: 62%;"><img class="spin noSelect" src="../assets/loading.png" height="105%"></div>`)
+
+	if (page == 0) $('#pageDown').hide()
+	else $('#pageDown').show()
+
+	Fetch(`../api/comments.php?userID=[[PLAYERID]]&type=profile&page=${page}`).then(res => {
+
+		console.log(res);
+
+		if (res.length != 10) $('#pageUp').hide()
+		else $('#pageUp').show()
+
+		if (res == "-1") return $('#loading').hide()
+
+		res.forEach(x => {
+			$('#statusDiv').append(`
+				<div class="commentBG">
+					<div class="comment">
+						<img class="inline statusIcon" src="${$('#mainIcon').find('img').attr('src') || ""}" height=21% style="display: ${compactMode ? "inline-block" : "none"}; margin-right: 0.8%">
+						<h2 class="inline">[[USERNAME]]</h2>
+						<div class="commentAlign">
+							<p class="pre commentText" style="color: rgb(${"[[USERNAME]]" == "RobTop" ? "50, 255, 255" : "[[MODERATOR]]" == "2" ? "75, 255, 75" : x.browserColor ? "255, 180, 255" : "255, 255, 255"})">${clean(x.content)}</p>
+						</div>
+					</div>
+					<p class="commentDate">${x.date}</p>
+					<div class="commentLikes">
+						<img id="likeImg" class="likeComment gdButton inline" commentID="${x.ID}" ${x.likes < 0 ? "style='transform: translateY(25%)'" : ""} src="../assets/${x.likes < 0 ? "dis" : ""}like.png" height=20% style="margin-right: 0.4%">
+						<h3 class="inline">${x.likes}</h3><br>
+					</div>
+				</div>`)
+		})
+		
+		$('.commentText').each(function() {
+		if ($(this).text().length > 100) {
+		let overflow = ($(this).text().length - 100) * 0.01
+		$(this).css('font-size', (3.5 - (overflow)) + 'vh')
+		}
+	});
+	getColors()
+	$('#loading').hide()
+	})
+	loadingComments = false;
+	
+	
+
+}
+
+let page = 0
+let loadingComments = false
+appendComments()
+
+$('#content').on('input', function() {
+	let remaining = 180-$('#content').val().length
+	$('#charcount').text(remaining)
+})
+
+$('#submitComment').click(function () {
+	let comment = $('#content').val()
+	let username = '[[USERNAME]]'
+	let password = $('#password').val()
+	let accountID = '[[ACCOUNTID]]'
+	if (!comment || !password || loadingComments) return $('#leavePost').hide()
+	$('#message').text("Posting...")
+	$('.postbutton').hide()
+	allowEsc = false
+	$.post("../postProfileComment", { comment, username, password, accountID, color: true })
+		.done(x => {
+			$('#content').val("")
+			$('#leavePost').hide()
+			$('.postbutton').show()
+			$('#message').html(messageText)
+			allowEsc = true
+			page = 0
+			appendComments()
+		})
+		.fail(e => { allowEsc = true; $('.postbutton').show(); $('#message').text(e.responseText.includes("DOCTYPE") ? "Something went wrong..." : e.responseText) })
+})
+
+let commentID = 0;
+let likeCount, likeImg;
+let likedComments;
+let like = true;
+
+$('#likebtn').click(function() {
+	$('#likebtn').removeClass('youAreNotTheOne')
+	$('#dislikebtn').addClass('youAreNotTheOne')
+	like = true
+})
+
+$('#dislikebtn').click(function() {
+	$('#likebtn').addClass('youAreNotTheOne')
+	$('#dislikebtn').removeClass('youAreNotTheOne')
+	like = false
+})
+
+$(document).on('click', '.likeComment', function(cmnt) {
+	commentID = $(this).attr('commentID')
+
+	likedComments = localStorage.likedComments ? JSON.parse(localStorage.likedComments) : []
+	if (likedComments.includes(commentID)) return;
+
+	lvID = $(this).attr('levelID') || 0
+	likeImg = $(this).find('img')
+	likeCount = $(this).parent().find('h3:not(.gold)')
+	
+	$('#featuredBlockedDiv').show()
+	//$('#likeComment').show()
+})
+
+$('#submitVote').click(function() {
+
+	if (likedComments.includes(commentID)) return $('#likeMessage').text("You've already liked/disliked this comment!");
+
+	let ID = commentID
+	let username = $('#like-username').val()
+	let password = $('#like-password').val()
+	let extraID = lvID || window.location.pathname.split('/')[2]
+	let accountID = 0
+	let likeType = like ? "1" : "0"
+	
+	if (!ID || !username || !password || loadingComments) return $('#postComment').hide()
+
+	$('#likeMessage').text(like ? "Liking..." : "Disliking... :(")
+		$('.postbutton').hide()
+		allowEsc = false
+
+	Fetch(`../api/profile/${username}`).then(res => {
+		if (!res || res == "-1") {allowEsc = true; $('.postbutton').show(); return $('#likeMessage').text("The username you provided doesn't exist!")}
+		else accountID = res.accountID
+
+		$.post("../like",  { ID, accountID, password, like: likeType, type: 3, extraID: "[[ACCOUNTID]]" })
+		.done(x => {
+			let newCount = parseInt(likeCount.text()) + (like ? 1 : -1)
+			likeCount.text(newCount)
+			if (newCount < 0) likeImg.attr('src', '../assets/dislike.png').css('transform', compact ? 'translateY(15%)' : 'translateY(25%)')
+			else likeImg.attr('src', '../assets/like.png').removeAttr('style')
+			$('#likeComment').hide()
+			$('#likebtn').trigger('click')
+			$('.postbutton').show()
+			$('#likeMessage').html(messageText.replace("profile posts", "liking posts").replace("postProfileComment", "like"))
+			allowEsc = true
+			likedComments.push(commentID)
+			localStorage.setItem('likedComments', JSON.stringify(likedComments))
+		})		
+		.fail(e => {allowEsc = true; $('.postbutton').show();$('#likeMessage').text(e.responseText.includes("DOCTYPE") ? "Something went wrong..." : e.responseText)})
+	})
+})
+
+let compactMode = false
+$('#compactMode').click(function() {
+	compactMode = !compactMode
+	if (compactMode) {
+		$('.profilePostHide').hide()
+		$('.statusIcon').show()
+		$('#statusDiv').css('height', $('#statusDiv').attr('compactHeight'))
+		$(this).attr('src', "../assets/expanded-on.png")
+	}
+
+	else {
+		$('.profilePostHide').show()
+		$('.statusIcon').hide()	
+		$('#statusDiv').css('height', $('#statusDiv').attr('normalHeight'))
+		$(this).attr('src', "../assets/expanded-off.png")
+	}
+})
+
+$('#leavePost').on("change keyup keydown paste click", "textarea", function () {
+	$('#content').val($('#content').val().replace(/[^\S ]+/g, ""))
+})
+
+$(document).keydown(function(k) {
+	
+	if ($('#content').is(':visible')) {
+			if (k.which == 13) k.preventDefault() //enter
+	}
+
+	if (loadingComments || $('.popup').is(":visible")) return;
+
+	if (k.which == 37 && $('#pageDown').is(":visible")) { //left
+		$('#pageDown').trigger('click')
+	}
+
+	if (k.which == 39 && $('#pageUp').is(":visible")) { //right
+		$('#pageUp').trigger('click')
+	}
+
+}) 
+
+$('.submitForm').click(function() {
+	document.dispatchEvent(new Event('initLoadingAlert'));
+
+	if ( $('.box-auto').prop("checked") == false ){
+		$('.box-auto').prop("checked",true);
+		$('.box-auto').val("0");
+	}
+	
+    let form = document.getElementById($(this).closest('form').attr('id'));
+	// form.dispatchEvent(new Event('submit'));
+    if (form.checkValidity()) {
+        let formData = new FormData(form);
+
+        fetch('../api/profileAdv.php', {
+            method: 'POST',
+            body: formData,
+			credentials: 'include'
+        })
+        .then(response => {$('.box-auto').prop("checked",false); $('.box-auto').val("1"); return response.text();})
+        .then(data => {
+			$('#loading-main').show();
+			try {
+				data = JSON.parse(data); 
+			} catch(err) {
+				console.log("Data Response: ", data);
+				console.error("Error in JSON Structure");
+			}
+			console.log("Data Response: ", data);
+			if(data.error == false) {
+				changeLoadingAlert(`${data.message}`,"done");
+			}
+			else {
+				changeLoadingAlert(`${data.message}`,"error");
+			}
+			setTimeout(function() { document.dispatchEvent(new Event('finishLoadingAlert')); location.reload(true); }, 1500);
+			$(this).closest('.popup').hide();
+        })
+        .catch(error => {
+			changeLoadingAlert(`${error}`,"error");
+            console.error('Error:', error);
+			setTimeout(function() { document.dispatchEvent(new Event('finishLoadingAlert')); }, 1500);
+        });
+		
+		
+    } else {
+		changeLoadingAlert("Data not completed!","error");
+        form.reportValidity();
+		setTimeout(function() { document.dispatchEvent(new Event('finishLoadingAlert')); }, 1200);
+    }
+})
+
+$('.closeWindow').click(function() {
+    $(this).closest('.popup').hide();
+});
+
+$("input:checkbox.checkgroup").on('click', function() {
+    let $box = $(this);
+    let group = "input:checkbox[name='" + $box.attr("name") + "']";
+
+    if (!$box.is(":checked")) {
+        $box.prop("checked", true);
+    } else {
+        $(group).not($box).prop("checked", false);
+    }
+});
+
+</script>
