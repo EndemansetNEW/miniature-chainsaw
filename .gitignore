@@ -44,3 +44,10 @@ Temporary Items
 incl/lib/debug.php
 dashboard/incl/lang/dev/append.php
 dashboard/incl/lang/dev/append.txt
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
